@@ -9,13 +9,13 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AntMediaEndpoint {
     
-	/* Service name like facebook, periscope, youtube or generic */
-	private String type;
+    /* Service name like facebook, periscope, youtube or generic */
+    private String type;
 
-	private String broadcastId;
-	private String streamId;
-	private String rtmpUrl;
-	private String name;
-	private String endpointServiceId;
-	private String serverStreamId;
+    private String broadcastId;
+    private String streamId;
+    private String rtmpUrl;
+    private String name;
+    private String endpointServiceId;
+    private String serverStreamId;
 }
