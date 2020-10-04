@@ -1,5 +1,5 @@
 ### Base stage
-FROM        ubuntu:18.04 as base
+FROM        ubuntu:18.04
 
 ARG         MEDIA_SERVER_ZIP=ant-media-server-2.1.0-community-2.1.0-20200720_1340.zip
 ARG         WORK_DIR=/usr/local/antmedia
@@ -18,7 +18,7 @@ RUN         buildDeps="libx11-dev \
             apt-get -y install ${buildDeps}
 
 ### Build media server stage
-FROM        base as build
+# FROM        base as build
 
 COPY        ${DEFAULT_MEDIA_SERVER_ZIP} /tmp
 COPY        webapps /tmp/webapps
@@ -46,7 +46,7 @@ RUN \
             rm -rfv /tmp/webapps
 
 ### Release stage
-FROM        build as release
+# FROM        build as release
 
 MAINTAINER  DongHoon Kang <dhkang@poscoict.com>
 
