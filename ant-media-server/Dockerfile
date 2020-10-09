@@ -40,8 +40,6 @@ RUN \
             cp /tmp/webapps/WebRTCApp/WEB-INF/web.xml ${DIR}/webapps/WebRTCApp/WEB-INF/web.xml && \
             rm -rfv /tmp/webapps
 
-LABEL       MAINTAINER="DongHoon Kang <dhkang@poscoict.com>"
-
 WORKDIR     /home/${DEFAULT_USER}
 
 ENTRYPOINT [ "/bin/bash", "-c", "/home/${DEFAULT_USER}/start.sh" ]
